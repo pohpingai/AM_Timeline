@@ -188,8 +188,8 @@ export default function Dashboard() {
   return (
     <div className="h-full flex overflow-hidden bg-slate-50">
       <aside className="w-16 flex-none bg-slate-900 flex flex-col items-center py-6 gap-6 z-40">
-        <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+        <div className="w-10 h-10 bg-violet-400 rounded-lg flex items-center justify-center">
+          <svg className="w-6 h-6 text-violet-950" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
         </div>
         <nav className="flex flex-col gap-6">
           <div className="w-8 h-8 rounded text-slate-400 hover:text-white flex items-center justify-center cursor-pointer">
@@ -217,7 +217,7 @@ export default function Dashboard() {
                 <select 
                   value={marketFilter}
                   onChange={(e) => setMarketFilter(e.target.value as MarketType)}
-                  className="appearance-none bg-slate-100 border border-slate-200 text-slate-700 text-sm rounded-md pl-3 pr-8 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-400 cursor-pointer"
+                  className="appearance-none bg-slate-100 border border-slate-200 text-slate-700 text-sm rounded-md pl-3 pr-8 py-1.5 focus:outline-none focus:ring-2 focus:ring-violet-400 cursor-pointer"
                 >
                   <option value="ALL">All Markets</option>
                   <option value="MY">Malaysia (MY)</option>
@@ -233,7 +233,7 @@ export default function Dashboard() {
             </div>
             <button 
               onClick={addTask}
-              className="flex items-center px-4 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors shadow-sm"
+              className="flex items-center px-4 py-1.5 bg-violet-400 hover:bg-violet-500 text-violet-950 hover:text-white rounded-md text-sm font-medium transition-colors shadow-sm"
             >
               <Plus className="w-4 h-4 mr-1.5" /> Add Task
             </button>
@@ -357,7 +357,7 @@ export default function Dashboard() {
                   {/* Market Tag */}
                   <div style={{ width: COL_WIDTHS.tag }} className="flex items-center justify-center px-2">
                     <select 
-                      className="w-full text-[10px] bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded font-bold uppercase text-center outline-none cursor-pointer hover:bg-blue-100 border-none appearance-none"
+                      className="w-full text-[10px] bg-violet-100/50 text-violet-700 px-1.5 py-0.5 rounded font-bold uppercase text-center outline-none cursor-pointer hover:bg-violet-100 border-none appearance-none"
                       value={task.tag}
                       onChange={(e) => updateTask(task.id, 'tag', e.target.value as TagType)}
                     >
@@ -502,7 +502,7 @@ export default function Dashboard() {
                       {/* Forecast Bar (Top line - Hollow) */}
                       {fcstWidth > 0 && (
                         <div 
-                          className="absolute top-0 h-[10px] rounded border-2 border-blue-400 transition-all bg-white shadow-sm hover:-translate-y-[1px]"
+                          className="absolute top-0 h-[10px] rounded border-2 border-violet-300 transition-all bg-white shadow-sm hover:-translate-y-[1px]"
                           style={{ left: fcstLeft, width: fcstWidth }}
                           title={`FCST: ${task.fcstStart} to ${task.fcstEnd}`}
                         >
@@ -512,7 +512,7 @@ export default function Dashboard() {
                       {/* Actual Bar (Bottom line - Solid) */}
                       {actWidth > 0 && (
                         <div 
-                          className="absolute bottom-0 h-[12px] rounded bg-blue-600 shadow-sm transition-all hover:translate-y-[1px]"
+                          className="absolute bottom-0 h-[12px] rounded bg-violet-400 shadow-sm transition-all hover:translate-y-[1px]"
                           style={{ left: actLeft, width: actWidth }}
                           title={`ACT: ${task.actStart} to ${task.actEnd}`}
                         >
@@ -538,11 +538,11 @@ export default function Dashboard() {
           <div className="flex gap-4 items-center">
             <span>Legend:</span>
             <div className="flex items-center gap-1">
-              <div className="w-3 h-1.5 border-2 border-blue-400 bg-white rounded"></div>
+              <div className="w-3 h-1.5 border-2 border-violet-300 bg-white rounded"></div>
               <span>Forecast</span>
             </div>
             <div className="flex items-center gap-1">
-              <div className="w-3 h-1.5 bg-blue-600 rounded"></div>
+              <div className="w-3 h-1.5 bg-violet-400 rounded"></div>
               <span>Actual</span>
             </div>
           </div>

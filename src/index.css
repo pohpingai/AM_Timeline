@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background-color: #F8FAFC;
+  margin: 0;
+  overflow: hidden;
+}
+
+.gantt-grid {
+  background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px);
+  background-size: 30px 100%; /* Matches dayWidth */
+}
+
+.input-geometric {
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+.input-geometric:focus {
+  outline: 2px solid #579BFC;
+  background: white;
+  border-radius: 2px;
+}

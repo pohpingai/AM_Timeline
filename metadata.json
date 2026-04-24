@@ -1,0 +1,6 @@
+{
+  "name": "Timeline Monitoring",
+  "description": "Project management dashboard with market-based filtering, date tracking, and a dual-line Gantt chart.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
